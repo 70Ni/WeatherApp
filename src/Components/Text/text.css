@@ -1,0 +1,23 @@
+.regularText {
+    font-family: 'Inter', Courier, monospace;
+    font-size: 1.3vw;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.light {
+    font-family: 'Inter', Courier, monospace;
+    font-size: 1.3vw;
+    color: white;
+    margin-bottom: 8px;
+    font-weight: 300;
+}
+
+.weatherFont {
+    font-family: 'Inter', Courier, monospace;
+    font-size: 12vw;
+    color: white;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
