@@ -62,7 +62,7 @@ function Hud({data}) {
         </div>
         <div className="Bottomsection">
           <div className="weatherDegWrpr">
-            <Text text= "20" className="weatherFont" />
+            <Text text= "20°C" className="weatherFont" />
             <Text text={data.currentConditions.conditions} className="regularText" />
           </div>
         </div>
