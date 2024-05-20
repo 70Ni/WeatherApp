@@ -32,9 +32,6 @@ function App() {
     sn,
   };
 
-  
-  
-
   useEffect(() => {
     // Function to fetch data
     // const fetchData = async () => {
@@ -62,7 +59,6 @@ function App() {
     // };
   }, []);
 
-
   function getWeatherImage(weatherData, defaultImage = "sn") {
     // try to resolve image or fallback to default
     const image =
@@ -72,7 +68,7 @@ function App() {
   }
 
   useEffect(() => {
-     setweatherData(details);
+    setweatherData(details);
   }, []);
 
   function SetGeolocation() {
@@ -97,7 +93,8 @@ function App() {
     <div className="App">
       <div
         className="Hero"
-        style={{ backgroundImage: `url(${weatherImage})`, transition: "2.5" }}>
+        style={{ backgroundImage: `url(${weatherImage})`, transition: "2.5" }}
+      >
         <div className="Darkwraper">
           {weatherData ? <Hud data={weatherData}> </Hud> : <h1>Loading</h1>}
         </div>

@@ -1,5 +1,7 @@
 .HudCover {
     height: 100vh;
+    padding: 80px 70px;
+    box-sizing: border-box;
 }
 .Hudwrpr {
     display: flex;
@@ -7,14 +9,23 @@
     height: 100%;
     justify-content: space-between;
 }
-.topSectin,.Bottomsection {
+.topSectin,.Bottomsection,.centerSection{
     display: flex;
     justify-content: space-between;
-    margin: 10vh;
+    /* margin: 10vh; */
+}
+.datacover {
+    display: flex;
+    justify-content: center;
 }
 .weatherDetwrpr {
     display: flex;
     justify-content: space-between;
+    width: 200px;
+    align-items: center;
+}
+.cursor {
+    cursor: pointer;
 }
 .weatherDegWrpr {
     display: flex;
