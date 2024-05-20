@@ -14,7 +14,6 @@ import "../../Components/Text/text.css";
 
 
 function Hud({data}) {
-  console.log(data)
   let secFromUTC = data.timezone
   function convertShiftToTime(seconds) {
     // Get current time in milliseconds

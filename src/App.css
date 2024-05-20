@@ -1,8 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+
 .App {
+  object-fit: contain;
   background-color: #282c34;
   width: 100vw;
+}
+.Hero {
+  /* background-image: url(./Images/image\ 3.png); */
+  object-fit: cover;
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center; 
+  height: 100%;
+  width: 100%;
+}
+.Darkwraper {
+  /* background-image: url(./Images/image\ 3.png); */
+  background-color: #0d0202a3;
+  height: 100%;
+  width: 100%;
 }
 /* 
 .App-logo {
