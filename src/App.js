@@ -3,7 +3,7 @@ import "./App.css";
 import Hud from "./Pages/Hud/Hud";
 import details from "../src/pack.json";
 import { useState } from "react";
-import { useEffect, componentDidMount } from "react";
+import { useEffect } from "react";
 import React from "react";
 
 import rain from "../src/Images/rain.jpg";
@@ -33,20 +33,7 @@ function App() {
   };
 
   
-  console.log(weatherImgs['cloudy'])
-
-  //  componentDidMount=()=>{
-  //   fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Manjeri,India?key=${apiKey}`).then(
-  //     // fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/11.2492544,76.2937344?key=${apiKey}`).then(
-  //       response => response.json()
-  //       ).then(
-  //         data =>{
-  //         console.log("Hell0")
-  //         setweatherData(data)
-  //       }
-  //     )
-
-  //  }
+  
 
   useEffect(() => {
     // Function to fetch data
@@ -75,6 +62,7 @@ function App() {
     // };
   }, []);
 
+
   function getWeatherImage(weatherData, defaultImage = "sn") {
     // try to resolve image or fallback to default
     const image =
@@ -84,50 +72,9 @@ function App() {
   }
 
   useEffect(() => {
-    // use async on the function where we are using the `await` keyword
      setweatherData(details);
-    // const handleFetchDataAndSetImage = async () => {
-    //   // let's wait for the data from API using await
-    //   // now we have data
-    // };
-
-    // handleFetchDataAndSetImage();
   }, []);
 
-  const handleSetBg = () => {
-    switch (weatherData.currentConditions.icon) {
-      case "rain":
-        setbgTheme(rain);
-        break;
-      case "fog":
-        setbgTheme(fog);
-        break;
-      case "cloudy":
-        setbgTheme(cloudy);
-        break;
-      case "snow":
-        setbgTheme(snow);
-        break;
-      case "wind":
-        setbgTheme(wind);
-        break;
-      case "sn":
-        setbgTheme(sn);
-        break;
-      default:
-        setbgTheme(sn);
-    }
-  };
-
-
-  // useEffect(() => {
-  //   // SetGeolocation ();
-  //   // getWeatherData()
-  // }, []);
-
-  // console.log(weatherData?weatherData.currentConditions.icon: "nothing", "current Icons")
-
-  //Setting Geolocation
   function SetGeolocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function (position) {
@@ -144,73 +91,13 @@ function App() {
     }
   }
 
-  const citi = "Manjeri";
-
-  // const getWeatherData = () => {
-  //   fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Manjeri,India?key=${apiKey}`).then(
-  //   // fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/11.2492544,76.2937344?key=${apiKey}`).then(
-  //     response => response.json()
-  //     ).then(
-  //       data =>{
-  //       console.log("Hell0")
-  //       setweatherData(data)
-  //     }
-  //   )
-  // }
-
-  // const getWeather = (event) => {
-
-  //   if(event.key == 'Enter') {
-
-  //     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${citi}&appid=${apiKey}`).then(
-  //       response => response.json()
-  //       ).then(
-  //         data =>{
-  //         console.log(event ,"Hell0")
-  //         setweatherData(data)
-  //       }
-  //     )
-  //   }
-  // }
-  let b = false;
-  // console.log(weatherData.currentConditions.icon)
-
-  // switch (weatherData? weatherData.currentConditions.icon: "sn") {
-  //   case "rain":
-  //     newBg = rain;
-  //     break;
-  //   case "fog":
-  //     newBg = fog;
-  //     break;
-  //   case "cloudy":
-  //     newBg = cloudy;
-  //     break;
-  //   case "snow":
-  //     newBg = snow;
-  //     break;
-  //   case "wind":
-  //     newBg = wind;
-  //     break;
-  //   case "sn":
-  //     newBg = sn;
-  //     break;
-  // }
-
   const weatherImage = getWeatherImage(weatherData);
 
-  // function ontheme() {
-  //   console.log("exe");
-  //   return setbgTheme(snow);
-  // }
-  console.log(weatherData);
   return (
     <div className="App">
-      {/* <button onClick={(e)=>ontheme()}>oHel</button> */}
       <div
         className="Hero"
-        style={{ backgroundImage: `url(${weatherImage})`, transition: "1.8s" }}
-      >
-        {/* <img src= {weatherData? weatherData.currentConditions.icon : snow} style = {{height:500}}/> */}
+        style={{ backgroundImage: `url(${weatherImage})`, transition: "2.5" }}>
         <div className="Darkwraper">
           {weatherData ? <Hud data={weatherData}> </Hud> : <h1>Loading</h1>}
         </div>
