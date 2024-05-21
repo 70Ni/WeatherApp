@@ -8,11 +8,11 @@ import arrow from "../../Images/Icon/Arrow.svg";
 function SerachInput() {
   return (
     <div className="searchInputwrpr" id="seachInput">
-      <form action="" className="searchform">
-        <img src={Search} alt="search" className="searchIcon" />
-        <input type="text" placeholder="search"/>
+      <form action="http://www.google.com/search" method="get" className="searchform">
         <img src={google} alt="Google icon" className="GoogleIcon" />
-        <img src={arrow} alt="search" className="EnterIcon" />
+        <input input type="text" name="q" placeholder="Search"/>
+        <img src={Search} alt="search" className="searchIcon" />
+        <img src={arrow} alt="search" className="EnterIcon" type="submit" value="search"  />
       </form>
     </div>
   );

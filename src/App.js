@@ -32,32 +32,32 @@ function App() {
     sn,
   };
 
-  useEffect(() => {
-    // Function to fetch data
-    // const fetchData = async () => {
-    //   try {
-    //     // Fetch data from the API
-    //     const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Manjeri,India?key=${apiKey}`);
-    //     // Check if request was successful
-    //     if (!response.ok) {
-    //       throw new Error('Failed to fetch data');
-    //     }
-    //     // Parse JSON response
-    //     const jsonData = await response.json();
-    //     // Update state with fetched data
-    //     setweatherData(jsonData);
-    //   } catch (error) {
-    //     console.error('Error fetching data:', error);
-    //   }
-    // };
-    // // Call fetchData function when component mounts
-    // fetchData();
-    // Clean up function (optional)
-    // return () => {
-    //   // Any cleanup code goes here
-    //   setweatherData(details);
-    // };
-  }, []);
+  // useEffect(() => {
+  //   // Function to fetch data
+  //   const fetchData = async () => {
+  //     try {
+  //       // Fetch data from the API
+  //       const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Chungathara,India?key=${apiKey}`);
+  //       // Check if request was successful
+  //       if (!response.ok) {
+  //         throw new Error('Failed to fetch data');
+  //       }
+  //       // Parse JSON response
+  //       const jsonData = await response.json();
+  //       // Update state with fetched data
+  //       setweatherData(jsonData);
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   };
+  //   // Call fetchData function when component mounts
+  //   fetchData();
+  //   // Clean up function (optional)
+  //   return () => {
+  //     // Any cleanup code goes here
+  //     setweatherData(details);
+  //   };
+  // }, []);
 
   function getWeatherImage(weatherData, defaultImage = "sn") {
     // try to resolve image or fallback to default
@@ -105,3 +105,4 @@ function App() {
 
 export default App;
 // https://freefrontend.com/css-text-animations/
+// https://developer.spotify.com/documentation/web-playback-sdk/tutorials/getting-started
