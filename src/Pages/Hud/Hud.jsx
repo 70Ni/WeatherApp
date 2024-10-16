@@ -61,23 +61,23 @@ function Hud({ data }) {
           </div>
           <div className="WeatherDetails">
             <div className="weatherDetwrpr">
-              <Text text="Precipitation" className="light " id="Precipit" />
+              <Text text="Precipitation:" className="light " id="Precipit" />
               <Text
-                text={data.currentConditions.precipprob}
+                text={`${data.currentConditions.precipprob} %`}
                 className="regularText"
               />
             </div>
             <div className="weatherDetwrpr">
               <Text text="Humidity" className="light" />
               <Text
-                text={data.currentConditions.humidity}
+                text={`${data.currentConditions.humidity} %`}
                 className="regularText"
               />
             </div>
             <div className="weatherDetwrpr">
               <Text text="Wind" className="light" />
               <Text
-                text={data.currentConditions.windspeed}
+                text={`${data.currentConditions.windspeed} km/h`}
                 className="regularText"
               />
             </div>
@@ -89,11 +89,7 @@ function Hud({ data }) {
         <div className="Bottomsection">
           <div className="weatherDegWrpr">
             <Text text={`${celsius}°C`} className="weatherFont" />
-            <Text
-              text={data.resolvedAddress}
-              className="mediumText cursor"
-              
-            />
+            <Text text={data.resolvedAddress} className="mediumText cursor" />
           </div>
         </div>
         {/* <BottomSlider /> */}
