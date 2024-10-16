@@ -11,10 +11,9 @@ function SerachInput() {
       <form
         action="http://www.google.com/search"
         method="get"
-      
         className="searchform"
       >
-        <input type="text" name="q" id='searchbox' placeholder="Search" />
+        <input input type="text" name="q" placeholder="Search" />
       </form>
       <img src={Search} alt="search" className="searchIcon" />
       <img
