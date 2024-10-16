@@ -90,6 +90,7 @@ function Hud({ data }) {
           <div className="weatherDegWrpr">
             <Text text={`${celsius}°C`} className="weatherFont" />
             <Text text={data.resolvedAddress} className="mediumText cursor" />
+          hello there
           </div>
         </div>
         {/* <BottomSlider /> */}
