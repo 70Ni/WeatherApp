@@ -33,6 +33,7 @@ function App() {
     sn,
   };
 
+  //fetching data from the api
   useEffect(() => {
     // Function to fetch data
     const fetchData = async () => {
